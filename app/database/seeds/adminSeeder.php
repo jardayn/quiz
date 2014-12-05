@@ -9,7 +9,7 @@ class adminSeeder extends Seeder {
         $password = $_ENV['adminpass'];
         $accname = $_ENV['adminacc'];
         $email = $_ENV['adminemail'];
-        User::create(array('username' => "$accname",'password' => Hash::make("$password"),'acc_type' => 'TheAlmighty'));
+        User::create(array('username' => "$accname",'password' => Hash::make("$password"),'access_level' => 'TheAlmighty'));
 
     }
 
