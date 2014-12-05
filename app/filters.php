@@ -97,6 +97,6 @@ Route::filter('userauth', function()
     }
     else
     {
-        return "Cmon, ya gotta login first";
+        return "Cmon, Login first";
     }
 });
