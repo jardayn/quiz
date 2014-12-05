@@ -37,7 +37,7 @@ class SessionCont extends \BaseController {
             Session::put('id',$user->id);
             Session::put('username',$user->username);
             Session::put('type',$user->access_level);
-
+            return dd(Session::all());
             return Redirect::to('/admin');
 
         } else {

@@ -29,11 +29,11 @@ margin: 0 auto;
         {{ Form::open(['route'=>'sessions.store','class'=>'form', 'role'=>'form', 'id'=>'login_form']) }}
             <div class="form-group">
                 {{ Form::label('username', 'Username') }}
-                {{ Form::text('username',null,['class'=>'form-control sexyform','placeholder'=>'Email Address']) }}
+                {{ Form::text('username',null,['class'=>'form-control ','placeholder'=>'Email Address']) }}
             </div>
             <div class="form-group">
                 {{ Form::label('password', 'Password') }}
-                {{ Form::password('password',['class'=>'form-control sexyform','placeholder'=>'Password']) }}
+                {{ Form::password('password',['class'=>'form-control','placeholder'=>'Password']) }}
             </div>
             <button type="submit" id="submit" class="btn btn-default">Submit</button>
             {{ Form::close() }}
