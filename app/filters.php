@@ -89,7 +89,7 @@ Route::filter('csrf', function()
 	}
 });
 
-//Custom filter
+//Customz filter
 Route::filter('userauth', function()
 {
     if (Session::get('type')=='TheAlmighty')
