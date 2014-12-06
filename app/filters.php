@@ -97,6 +97,6 @@ Route::filter('userauth', function()
     }
     else
     {
-      return 'Cmon, Login first'.Session::get('type');
+      return Session::get('type');
     }
 });
