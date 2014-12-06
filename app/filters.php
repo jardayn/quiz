@@ -92,12 +92,14 @@ Route::filter('csrf', function()
 //Customz filter
 Route::filter('userauth', function()
 {
-    if (Session::get('type')=='TheAlmighty')
+    $filter = Session::get('type');
+
+    if ($filter=='TheAlmighty')
     {
-        return "success";
+        return "success $filter";
     }
     else
     {
-      return "not success";
+      return "not success $filter";
     }
 });
