@@ -22,7 +22,7 @@ Route::resource('sessions', 'SessionCont');
 Route::get('/flush', function()
 {
     Session::flush();
-    Redirect::to('/');
+    return 'session flushed';
 });
 
 Route::get('/', function()

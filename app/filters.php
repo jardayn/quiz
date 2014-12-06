@@ -94,12 +94,12 @@ Route::filter('userauth', function()
 {
     $filt=Session::get('type');
 
-    if ($filt=='TheAlmighty')
+    if ($filt=='Admin')
     {
-        return "yay";
+        return dd(Session::all());
     }
     else
     {
-      return $filt;
+        return dd(Session::all());
     }
 });
