@@ -94,9 +94,10 @@ Route::filter('userauth', function()
 {
     if (Session::get('type')=='TheAlmighty')
     {
+        return "success";
     }
     else
     {
-      return Session::get('type');
+      return "not success";
     }
 });
