@@ -96,7 +96,6 @@ Route::filter('userauth', function()
 
     if ($filt=='Admin')
     {
-        return dd(Session::all());
     }
     else
     {
