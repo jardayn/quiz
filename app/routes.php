@@ -95,6 +95,8 @@ Route::get('/login', function () {
     return View::make('login');
 });
 Route::group(array('before' => 'userauth'), function() {
+    Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'Deletecont@edit'));
+
     Route::get('/admin', function () {
         $quizzes = DB::table('quizzes')->get(['id', 'name', 'imgurl']);
         return View::make('admin', ['quizzes' => $quizzes]);
@@ -116,5 +118,5 @@ Route::group(array('before' => 'userauth'), function() {
     Route::get('/dump', function () {
 
     });
-    Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'Deletecont@edit'));
+
 });
