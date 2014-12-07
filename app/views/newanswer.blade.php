@@ -88,7 +88,7 @@
                                                        <td>{{{$answer->id}}}</td>
                                                        <td>{{{$answer->Text}}}</td>
                                                        <td>{{{$answer->result_value}}}</td>
-                                                       <td> <a href="{{URL::route('delete_stuff', ['quizzes',$answer->id]);}}" class="btn btn-danger">Delete</a></td>
+                                                       <td> <a href="{{URL::route('delete_stuff', ['quiz_question_answers',$answer->id]);}}" class="btn btn-danger">Delete</a></td>
 
                                                    </tr>
                                                    @endforeach

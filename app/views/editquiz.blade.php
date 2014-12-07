@@ -35,7 +35,7 @@
  </div>
  <div class="container">
  	<div class="row">
-<div class="col-md-12">
+<div class="col-md-6">
 
 <center><h1>Add a question to this quiz!</h1></center>
 {{ Form::open(['route'=>'quest.store','class'=>'form-horizontal', 'role'=>'form', 'id'=>'quizform']) }}
@@ -66,10 +66,10 @@
 
  </div>
  </div>
-
+<div class="col-md-6">
 <center><h1>Add a result to the quiz</h1></center>
-	<div class="row">
-<div class="col-md-12">
+=
+
 
 {{ Form::open(['route'=>'result.store','class'=>'form-horizontal', 'role'=>'form', 'id'=>'quizform']) }}
 <fieldset>
@@ -115,7 +115,7 @@
 <br>
 
 
- </div>
+
  </div>
  <div class="row">
  <div class="col-md-8">
