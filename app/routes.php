@@ -18,7 +18,6 @@ Route::resource('result', 'ResultsCont');
 Route::resource('answer', 'answCont');
 Route::resource('quizansw', 'trackingCont');
 Route::resource('sessions', 'SessionCont');
-Route::resource('delete', 'deleteCont');
 //front
 Route::get('/flush', function()
 {
@@ -95,7 +94,7 @@ Route::get('completed/{quizid}', function($quizid)
 Route::get('/login', function () {
     return View::make('login');
 });
-Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'Deletecont@edit'));
+Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'deleteCont@edit'));
 Route::group(array('before' => 'userauth'), function() {
 
 
