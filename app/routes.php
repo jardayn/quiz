@@ -109,7 +109,7 @@ Route::group(array('before' => 'userauth'), function() {
         $questid = $id;
         $quizid = DB::table('quiz_questions')->where('id', '=', $id)->first();
 
-        $answers = DB::table('quiz_question_answers')->where('quest_id', '=', $id)->get(['id', 'Text']);
+        $answers = DB::table('quiz_question_answers')->where('quest_id', '=', $id)->get(['id', 'Text','result_value']);
         return View::make('newanswer', ['answers' => $answers, 'questid' => $questid, 'quizid' => $quizid]);
     });
 

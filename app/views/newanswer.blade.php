@@ -71,13 +71,14 @@
 
  <div class="row">
  <div class="col-md-8">
- Quizzez table
+<center><h1>Answers already attached to the question</h1></center>
 <table class="table table-striped table-bordered table-hover"
                                                        id="runTable">
                                                     <thead>
                                                     <tr>
                                                         <th>Id</th>
                                                         <th>Text</th>
+                                                        <th>Value</th>
                                                         <th>Delete</th>
                                                     </tr>
                                                     </thead>
@@ -86,6 +87,7 @@
                                                    <tr class="odd gradeX">
                                                        <td>{{{$answer->id}}}</td>
                                                        <td>{{{$answer->Text}}}</td>
+                                                       <td>{{{$answer->result_value}}}</td>
                                                        <td> <a href="{{URL::route('delete_stuff', ['quizzes',$answer->id]);}}" class="btn btn-danger">Delete</a></td>
 
                                                    </tr>
