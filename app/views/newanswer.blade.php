@@ -44,14 +44,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="text">Answer</label>
   <div class="col-md-6">
-  <input id="text" name="text" type="text" placeholder="Name" class="form-control input-md">
+  <input id="text" name="text" type="text" placeholder="Actual answer" class="form-control input-md">
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="resultnum">Result number</label>
+  <label class="col-md-4 control-label" for="resultnum">Result value</label>
   <div class="col-md-6">
-  <input id="resultnum" name="resultnum" type="text" placeholder="Name" class="form-control input-md">
+  <input id="resultnum" name="resultnum" type="text" placeholder="The value of the corresponding result" class="form-control input-md">
   </div>
 </div>
 
@@ -76,8 +76,8 @@
                                                        id="runTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>dsasdas</th>
+                                                        <th>Id</th>
+                                                        <th>Text</th>
                                                         <th>Delete</th>
                                                     </tr>
                                                     </thead>

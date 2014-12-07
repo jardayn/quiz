@@ -53,7 +53,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="question_number">Question Number</label>
   <div class="col-md-6">
-  <input id="question_number" name="question_number" type="text" placeholder="Question" class="form-control input-md">
+  <input id="question_number" name="question_number" type="text" placeholder="Question number (1 or 2 or 3, single digit)" class="form-control input-md">
   </div>
 
 </div>
@@ -80,7 +80,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="title">Title of the result</label>
   <div class="col-md-6">
-  <input id="title" name="title" type="text" placeholder="Question" class="form-control input-md">
+  <input id="title" name="title" type="text" placeholder="Title of the result" class="form-control input-md">
   </div>
 
 </div>
@@ -88,14 +88,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="result_number">Result number</label>
   <div class="col-md-6">
-  <input id="result_number" name="result_number" type="text" placeholder="Question" class="form-control input-md">
+  <input id="result_number" name="result_number" type="text" placeholder="Result number(again, 1 2 3)" class="form-control input-md">
   </div>
 
 </div>
 <div class="form-group">
   <label class="col-md-4 control-label" for="text">Text, expand the result dude</label>
   <div class="col-md-6">
-  <input id="text" name="text" type="text" placeholder="Question" class="form-control input-md">
+  <input id="text" name="text" type="text" placeholder="Text which explains the result" class="form-control input-md">
   </div>
 
 </div>
@@ -103,7 +103,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="imgurl">Link to the picture of the result</label>
   <div class="col-md-6">
-  <input id="imgurl" name="imgurl" type="text" placeholder="Question" class="form-control input-md">
+  <input id="imgurl" name="imgurl" type="text" placeholder="Link to the picture" class="form-control input-md">
   </div>
 
 </div>
@@ -147,13 +147,13 @@
  <hr>
   <div class="row">
   <div class="col-md-8">
-  Results
+<center><h1>Results</h1></center>
  <table class="table table-striped table-bordered table-hover">
      <thead>
      <tr>
          <th>Id</th>
          <th>Title</th>
-         <th>Contents</th>
+         <th>Text of the result</th>
          <th>Link to image</th>
          <th>Delete</th>
      </tr>
@@ -164,7 +164,7 @@
              <td>{{{$result->id}}}</td>
              <td>{{{$result->title}}}</td>
              <td>{{{$result->Text}}}</td>
-             <td>{{{$result->imgurl}}}</td>
+             <td><a href="{{{$result->imgurl}}}">Link!</a></td>
              <td> <a href="{{URL::route('delete_stuff', ['quiz_results',$result->id]);}}" class="btn btn-danger">Delete</a></td>
          </tr>
          @endforeach
