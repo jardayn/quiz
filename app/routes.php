@@ -94,8 +94,9 @@ Route::get('completed/{quizid}', function($quizid)
 Route::get('/login', function () {
     return View::make('login');
 });
+Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'Deletecont@edit'));
 Route::group(array('before' => 'userauth'), function() {
-    Route::get('annihilate/{target}/{id}', array('as' => 'delete_stuff', 'uses' => 'Deletecont@edit'));
+
 
     Route::get('/admin', function () {
         $quizzes = DB::table('quizzes')->get(['id', 'name', 'imgurl']);
