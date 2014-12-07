@@ -42,7 +42,7 @@ class SessionCont extends \BaseController {
 
         } else {
 
-            return Redirect::to('/');
+            return Redirect::to('/login');
         }
 	}
 
