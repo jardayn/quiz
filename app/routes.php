@@ -18,6 +18,7 @@ Route::resource('result', 'ResultsCont');
 Route::resource('answer', 'answCont');
 Route::resource('quizansw', 'trackingCont');
 Route::resource('sessions', 'SessionCont');
+Route::resource('delete', 'deleteCont');
 //front
 Route::get('/flush', function()
 {
