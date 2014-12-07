@@ -99,6 +99,6 @@ Route::filter('userauth', function()
     }
     else
     {
-        return dd(Session::all());
+        return 'Please login to access this area';
     }
 });

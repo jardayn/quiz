@@ -29,7 +29,7 @@ margin: 0 auto;
         {{ Form::open(['route'=>'sessions.store','class'=>'form', 'role'=>'form', 'id'=>'login_form']) }}
             <div class="form-group">
                 {{ Form::label('username', 'Username') }}
-                {{ Form::text('username',null,['class'=>'form-control ','placeholder'=>'Email Address']) }}
+                {{ Form::text('username',null,['class'=>'form-control ','placeholder'=>'Username']) }}
             </div>
             <div class="form-group">
                 {{ Form::label('password', 'Password') }}
