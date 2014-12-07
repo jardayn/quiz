@@ -31,7 +31,7 @@
 	 		@foreach($quizzes as $quiz)
                 <div class="col-md-4 col-xs-6">
                     <div class="quiz-container">
-                        <a href="/quiz/public/quizgo/{{{$quiz->id}}}/1">
+                        <a href="/quizgo/{{{$quiz->id}}}/1">
                             <img src="{{{$quiz->imgurl}}}">
                             <p>{{{$quiz->name}}}</p>
                         </a>

@@ -136,7 +136,7 @@
 
             <td>{{{$question->question_number}}}</td>
             <td>{{{$question->Text}}}</td>
-            <td> <a class="btn btn-primary" href="/quiz/public/admin/quest/{{{$question->id}}}">Edit</a></td>
+            <td> <a class="btn btn-primary" href="/admin/quest/{{{$question->id}}}">Edit</a></td>
             <td> <a href="{{URL::route('delete_stuff', ['quiz_questions',$question->id]);}}" class="btn btn-danger">Delete</a></td>
         </tr>
         @endforeach

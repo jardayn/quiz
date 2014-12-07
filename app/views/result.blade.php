@@ -85,10 +85,10 @@
 	   			    <p>@if($completed=='1'){{{$result->title}}} @else {{{$quizinfo->Name}}} @endif</p>
 	   				<img src="{{{$quizinfo->imgurl}}}">
 	   				<p>@if($completed=='1'){{{$result->title}}} @else Answer questions to figure out {{{$quizinfo->Name}}}  @endif</p>
-	   				<a href="http://95.68.67.131/quiz/public/completed/9" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
+	   				<a href="http://95.68.67.131/completed/9" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
 	   						 		</div>
 			</div>
-			<center><div class="fb-comments" data-href="http://95.68.67.131/quiz/public/completed/9" data-numposts="5" data-colorscheme="light"></div>	</center>
+			<center><div class="fb-comments" data-href="http://95.68.67.131/completed/9" data-numposts="5" data-colorscheme="light"></div>	</center>
 
  					<center>
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- Responsive Quiz Flakes Lower Ad --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5888539100610499" data-ad-slot="7768463762" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
@@ -98,7 +98,7 @@
  		<div class="col-md-4">
  		@foreach($quizzes as $quiz)
  			 			<div class="quiz-container">
-			 			 <a href="/quiz/public/quizgo/{{{$quiz->id}}}/1">
+			 			 <a href="/quizgo/{{{$quiz->id}}}/1">
                         <img src="{{{$quiz->imgurl}}}">
                         <p>{{{$quiz->name}}}</p>
 					</a>
