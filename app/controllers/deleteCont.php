@@ -55,15 +55,22 @@ class deleteCont extends \BaseController {
 	 */
 	public function edit($target,$id)
 	{
-        if($target == 'quiz_questions' || $target == 'quizzes' || $target == 'quiz_question_answers' || $target == 'quiz_results'){
-            DB::table("$target")
-                ->where('id', '=', $id)
-                ->delete();
-            return Redirect::back()->withMsg("Record #$id was deleted");
+        if(Session::get('type')=='Admin')
+        {
+            if($target == 'quiz_questions' || $target == 'quizzes' || $target == 'quiz_question_answers' || $target == 'quiz_results'){
+                DB::table("$target")
+                    ->where('id', '=', $id)
+                    ->delete();
+                return Redirect::back()->withMsg("Record #$id was deleted");
+            }
+            else
+            {
+                return Redirect::back()->withMsg('Sneaky sneaky');
+            }
         }
         else
         {
-            return Redirect::back()->withMsg('Ya sneaky bastard');
+            return Redirect::to('/');
         }
 
 	}
