@@ -99,6 +99,6 @@ Route::filter('userauth', function()
     }
     else
     {
-        return 'Please login to access this area';
+        return Redirect::to('/login');
     }
 });
