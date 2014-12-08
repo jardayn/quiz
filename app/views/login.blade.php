@@ -17,15 +17,11 @@
 <meta property="og:type" content="website" />
 </head>
 <body>
-<style>
-.centerthis {
-margin: 0 auto;
-}
-</style>
+
 <div class="container">
     <div class="row">
-        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-1 centerthis">
-        <center><h1>Lets do this</h1></center>
+        <div class="col-md-6">
+        <center><h1>Login</h1></center>
         {{ Form::open(['route'=>'sessions.store','class'=>'form', 'role'=>'form', 'id'=>'login_form']) }}
             <div class="form-group">
                 {{ Form::label('username', 'Username') }}

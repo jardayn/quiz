@@ -83,6 +83,7 @@
                                                         <th>Id</th>
                                                         <th>Name</th>
                                                         <th>Picture</th>
+                                                        <th>Publish/Hide?</th>
                                                         <th>Edit</th>
                                                         <th>Delete</th>
                                                     </tr>
@@ -94,6 +95,11 @@
                                                         <td>{{{$quiz->id}}}</td>
                                                         <td>{{{$quiz->name}}}</td>
                                                         <td><a href="{{{$quiz->imgurl}}}">Link to the picture</a></td>
+                                                        @if($quiz->live=='yes')
+                                                         <td> <a href="{{URL::route('publish_quiz', [$quiz->id]);}}" class="btn btn-warning">Hide</a></td>
+                                                         @else
+                                                          <td> <a href="{{URL::route('publish_quiz', [$quiz->id]);}}" class="btn btn-success">Publish</a></td>
+                                                          @endif
                                                         <td> <a href="/admin/quiz/{{{$quiz->id}}}" class="btn btn-primary">Edit</a></td>
                                                         <td> <a href="{{URL::route('delete_stuff', ['quizzes',$quiz->id]);}}" class="btn btn-danger">Delete</a></td>
                                                     </tr>

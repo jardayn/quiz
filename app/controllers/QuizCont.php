@@ -46,6 +46,7 @@ class QuizCont extends BaseController {
         $run = new Quiz;
         $run->name = (Input::get('name'));
         $run->imgurl = (Input::get('imgurl'));
+        $run->live = 'no';
         $run->save();
         return Redirect::back()->withMsg('Quiz Created');
     }
@@ -71,7 +72,29 @@ class QuizCont extends BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+        if(Session::get('type')=='Admin')
+        {
+            $quiz = DB::table('quizzes')->where('id','=',$id)->first();
+            
+        if($quiz->live =='no')
+            {
+                DB::table("quizzes")
+                    ->where('id', '=', $id)
+                    ->update(array('live' => 'yes'));
+                return Redirect::back()->withMsg("Done");
+            }
+            else
+            {
+                DB::table("quizzes")
+                    ->where('id', '=', $id)
+                    ->update(array('live' => 'no'));
+                return Redirect::back()->withMsg("Done");
+            }
+        }
+        else
+        {
+            return Redirect::to('/');
+        }
 	}
 
 	/**
