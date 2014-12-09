@@ -75,7 +75,7 @@ class QuizCont extends BaseController {
         if(Session::get('type')=='Admin')
         {
             $quiz = DB::table('quizzes')->where('id','=',$id)->first();
-            
+
         if($quiz->live =='no')
             {
                 DB::table("quizzes")

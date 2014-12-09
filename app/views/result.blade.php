@@ -14,7 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <title>@if($completed=='1'){{{$result->title}}} @else {{{$quizinfo->Name}}} @endif - quizflakes.com</title>
-<meta property="og:title" content="@if($completed=='1') {{{$result->title}}}@else {{{$quizinfo->name}}} @endif" />
+<meta property="og:title" content="@if($completed=='1') {{{$result->title}}}@else {{{$quizinfo->Name}}} @endif" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="@if($completed=='1'){{{$result->Text}}} @else {{{$quizinfo->Name}}} @endif" />
     <meta property="og:image" content="{{{$quizinfo->imgurl}}}" />
@@ -55,12 +55,12 @@
 			<p> Do you agree with your result? Share your thoughts with us in the comments! </p>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			<a href="http://104.236.29.122/completed/1" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
+			<a href="http://www.quizflakes.com/completed/{{{$quizid}}}" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
 		</div>
 		<div class="secound"><i class="fa fa-times close"></i>
 			<p class="title">LIKE US if you enjoyed this quiz!</p>
 			<center>
-				<div class="fb-like-box" data-href="http://95.68.67.131/mod/public" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+				<div class="fb-like-box" data-href="http://www.quizflakes.com/" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
 			</center>
 		</div>
 	</div>
@@ -88,7 +88,7 @@
 	   				<a href="http://95.68.67.131/completed/9" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
 	   						 		</div>
 			</div>
-			<center><div class="fb-comments" data-href="http://95.68.67.131/completed/9" data-numposts="5" data-colorscheme="light"></div>	</center>
+			<center><div class="fb-comments" data-href="www.quizflakes.com/completed/{{{$quizid}}}" data-numposts="5" data-colorscheme="light"></div>	</center>
 
  					<center>
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- Responsive Quiz Flakes Lower Ad --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5888539100610499" data-ad-slot="7768463762" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
