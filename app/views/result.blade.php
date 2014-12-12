@@ -60,8 +60,9 @@
 		<div class="secound"><i class="fa fa-times close"></i>
 			<p class="title">LIKE US if you enjoyed this quiz!</p>
 			<center>
-				<div class="fb-like-box" data-href="http://www.quizflakes.com/" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
-			</center>
+<div class="fb-like" data-href="https://www.facebook.com/pages/Quiz-Flakes/1420305141592703?ref=hl" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+<div class="fb-share-button" data-href="https://www.facebook.com/pages/Quiz-Flakes/1420305141592703" data-layout="button_count"></div>
+            </center>
 		</div>
 	</div>
 @endif
@@ -84,8 +85,9 @@
 					</center>
 	   			    <p>@if($completed=='1'){{{$result->title}}} @else {{{$quizinfo->Name}}} @endif</p>
 	   				<img src="{{{$quizinfo->imgurl}}}">
-	   				<p>@if($completed=='1'){{{$result->title}}} @else Answer questions to figure out {{{$quizinfo->Name}}}  @endif</p>
-	   				<a href="http://95.68.67.131/completed/9" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
+	   				<p>@if($completed=='1'){{{$result->title}}} @else Answer questions to figure out {{{$quizinfo->Name}}}<br> <a href="/quizgo/{{{$quizid}}}/1" class="btn btn-primary">Start the test</a>  @endif</p>
+
+	   				<a href="http://www.quizflakes.com/completed/{{{$quizid}}}" class="fbshare"><i class="fa fa-facebook"></i>Share on facebook</a>
 	   						 		</div>
 			</div>
 			<center><div class="fb-comments" data-href="www.quizflakes.com/completed/{{{$quizid}}}" data-numposts="5" data-colorscheme="light"></div>	</center>

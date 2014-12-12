@@ -45,7 +45,10 @@
         		@endforeach
 		 	 </div>
 		</form>
-
+<center>
+<div class="fb-like" data-href="https://www.facebook.com/pages/Quiz-Flakes/1420305141592703?ref=hl" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+<div class="fb-share-button" data-href="https://www.facebook.com/pages/Quiz-Flakes/1420305141592703" data-layout="button_count"></div>
+            </center>
 	</div>
 
 	<center>
